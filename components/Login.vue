@@ -6,7 +6,7 @@
 
 
           <div v-if="isLogin" class="login-texts flex flex-column">
-            <a @click="cLogin" style="cursor: pointer; margin-left: auto"><img src="~static/close.svg" style="width: 20px"></a>
+            <a @click="cLogin" style="cursor: pointer; margin-left: auto;"><img src="~static/close.svg" style="width: 20px"></a>
             <h3 class="white-text padding-bottom-10">Welcome</h3>
             <p class="white-text">Please Login to your Dashboard</p>
             <form class="form-body">
@@ -284,7 +284,7 @@ export default {
           localStorage.setItem('token', token)
           axios.defaults.headers.common['Authorization'] = token
           
-          console.log("res", res);
+          // console.log("res", res);
           this.$router.push('/services/')
 
           this.$cookies.set("access_token", res.data.access, {
@@ -444,7 +444,7 @@ color:black
     position: fixed;
     left: 0;
     right: 0;
-    top: 0;
+    top: 10%;
     bottom: 0;
     margin: auto;
     z-index: 51;
@@ -478,7 +478,7 @@ color:black
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
+    bottom: 20%;
     margin: auto;
     max-width: 500px;
     z-index: 51;
